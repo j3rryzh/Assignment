@@ -10,7 +10,7 @@ interface DataProps {
 export default function Row({ id, title, body }: DataProps) {
   const [backGroundColor, setBackGroundColor] = useState<string>('')
   const router = useRouter()
-  const handleClick = (e) => {
+  const handleClick = () => {
     setBackGroundColor('bg-green-700')
     router.push(`/${id}`)
   }

@@ -1,7 +1,7 @@
 import Row from './Row'
 
 interface DataProps {
-  visibleData: object[]
+  visibleData: { id: number; userId: number; title: string; body: string }[]
 }
 
 export default function Table({ visibleData }: DataProps) {

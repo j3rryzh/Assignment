@@ -21,7 +21,7 @@ export default function Post() {
         <Header text={'Failed to load'} />
       </Template>
     )
-  const visibleData = data.filter((item) => item?.id == postId)
+  const visibleData = data.filter((item) => item?.id.toString() === postId)
 
   return (
     <Template>

@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
 
 interface DataProps {
-  page: number
-  totalPage: number
+  page?: number
+  totalPage?: number
+  setPage?: any
 }
 
 export default function Navigator({ page, setPage, totalPage }: DataProps) {
@@ -23,7 +24,7 @@ export default function Navigator({ page, setPage, totalPage }: DataProps) {
           page === 1 ? `cursor-not-allowed` : `cursor-pointer`
         }`}
         onClick={() => {
-          page !== 1 && setPage((page) => page - 1)
+          page !== 1 && setPage((page: number) => page - 1)
         }}
       >
         {'⬅️'}
@@ -34,7 +35,7 @@ export default function Navigator({ page, setPage, totalPage }: DataProps) {
           page === totalPage ? `cursor-not-allowed` : `cursor-pointer`
         }`}
         onClick={() => {
-          page !== totalPage && setPage((page) => page + 1)
+          page !== totalPage && setPage((page: number) => page + 1)
         }}
       >
         {'➡️'}
